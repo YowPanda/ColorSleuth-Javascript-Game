@@ -72,7 +72,7 @@ function nextLevel()
 		// Начало игры (перепрохождение)
 		if (level === 0)
 		{
-            squareObj.innerHTML = 'НАЖМИТЕ ДЛЯ СТАРТА';
+            squareObj.innerHTML = 'НАЖМИ ДЛЯ СТАРТА';
 			timer.innerHTML = 'ОСТАЛОСЬ: ' + currentSec + ' СЕК';			
         }		
 		
