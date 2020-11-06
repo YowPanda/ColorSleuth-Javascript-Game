@@ -1,0 +1,201 @@
+:root {
+	/* Размер игрового поля */
+	--playing-field-side: 430px;
+	
+	/* Цвета */
+	--background-color: #FAFAFC;
+	--text-color: #3D3D3D;
+	--animation-color: #0336FF;
+	--footer-color: #3D3D3D10;
+	--light-gray: #A6ABAB;
+}
+
+/* Базовое поведение */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+    line-height: 1.5;
+	color: var(--text-color);
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+    min-height: 100vh;
+	background-color: var(--background-color);
+}
+
+/* Стартовая страница */
+/* Хэдер на стартовой странице */
+.main-header {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+	margin-top: 11rem;
+	font-size: 1.5rem;
+	
+	opacity:0;	/*Элемент полностью прозрачный (невидимый)*/
+	animation: show 1s 1;	/* Указываем название анимации, её время и количество повторов*/
+	animation-fill-mode: forwards;	/* Чтобы элемент оставался в конечном состоянии анимации */
+	animation-delay: 0.3s;	/* Задержка перед началом */
+	
+	transform: translate(-100px, 0);
+	transition: all ease-in-out;
+}
+
+@keyframes show{
+	0% {
+		opacity:0;
+		transition: all ease-in-out;
+	}
+	100% {
+		opacity:1;
+		transform: translate(0px, 0);
+	}
+}
+
+/* Заголовки */ 
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	color: var(--text-color);
+	font-weight: 700;
+	font-style: italic;
+}
+
+/* Контент в основной части */
+.main {
+	margin-top: 0.3rem;
+	text-align: center;
+	
+	opacity:0;	/*Элемент полностью прозрачный (невидимый)*/
+	animation: show 1s 1;	/* Указываем название анимации, её время и количество повторов*/
+	animation-fill-mode: forwards;	/* Чтобы элемент оставался в конечном состоянии анимации */
+	animation-delay: 0.5s;	/* Задержка перед началом */
+	
+	transform: translate(-120px, 0);
+	transition: all ease-in-out;
+}
+
+/* Кнопка "Начать" */ 
+.start-button {
+	transition: 0.5s;
+	text-decoration: none;
+	color: var(--background-color);
+	font-weight: 700;
+	font-style: italic;
+	font-size: 2.7rem;
+	background-color: var(--text-color);
+	padding: 5px 15px;
+}
+
+/* "Начать" при наведении */
+.start-button:hover {
+	transition: 0.5s;
+	box-shadow:
+    -1px 1px var(--animation-color),
+    -2px 2px var(--animation-color),
+    -3px 3px var(--animation-color),
+    -4px 4px var(--animation-color),
+    -5px 5px var(--animation-color),
+    -6px 6px var(--animation-color),
+    -7px 7px var(--animation-color);
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+}
+
+/* Нажатие на кнопку начать */
+.start-button:active {
+	transition: 0.2s;
+	box-shadow: none;
+	font-size: 2.6rem;
+}
+
+/* Страница с игрой */
+/* Хэдер на странице с игрой */
+.game-header {
+	display: flex;
+    justify-content: space-between;
+    text-align: center;
+	margin-top: 0;
+	font-size: 0.9rem;
+}
+
+/* Уровень */
+.level {
+	margin-left: 4rem;
+}
+
+/* Таймер */
+.timer {
+	margin-right: 4rem;
+}
+
+/* Игровое поле */
+.playing-field {
+	height: var(--playing-field-side);
+	width: var(--playing-field-side);
+	margin: 0 auto;
+	display: flex;
+}
+
+/* Список квадратов для игры */
+.list-of-squares {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	height: var(--playing-field-side) - 1;
+    width: var(--playing-field-side) - 1;
+	
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Элемент списка("приветственный" текст) */
+.list-of-squares li {
+	transition: 0.1s;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 2rem;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 0.1rem;
+	margin: 1px;
+}
+
+/* Увеличиваем квадрат при наведении */
+.list-of-squares li:hover {
+	transform: scale(1.08);
+	color: var(--animation-color);
+}
+
+/* Уменьшаем квадрат при клике */
+.list-of-squares li:active {
+	transform: scale(0.92);
+	color: var(--text-color);
+}
+
+/* Подвал */
+.footer {
+	background-color: var(--footer-color);
+	text-align: center;
+	margin-top: auto;
+}
+
+/* Параграфы */ 
+p {
+	font-weight: 600;
+	font-style: italic;
+	font-size: 1.1rem;
+}
+
+
+
