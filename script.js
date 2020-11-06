@@ -132,7 +132,7 @@ function nextLevel()
             squareObj.onclick = function ()
 			{
 				clearInterval(timerId);
-				alert("Упс!\nНе тот квдрат!");
+				alert("Упс!\nНе тот квадрат!");
 							
                 sessionStorage.clear();
 				level = 0;
