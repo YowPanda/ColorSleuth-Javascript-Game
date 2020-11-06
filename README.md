@@ -4,8 +4,7 @@
 ### Лабораторная работа № 2: JavaScript.
 ### Максимум 10 баллов. Часть Контрольной точки 2: HTML, CSS
 
-#### Игра:
-<https://yowpanda.github.io/ColorSleuth-Javascript-Game/>
+#### Игра: <https://yowpanda.github.io/ColorSleuth-Javascript-Game/>
 
 #### Требуется реализовать игру «Цветные квадраты»:
 Дано квадратное игровое поле, поделенное на квадраты. Изначальный размер поля «2 x 2».
